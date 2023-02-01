@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="GameClubApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GameClubApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="Black" >
+        <StackPanel  Margin="100,100,100,100">
+            <TextBlock Text="GAME CLUB APP" Foreground="Red" TextAlignment="Center" FontSize="60" FontWeight="ExtraBlack">
+                
+            </TextBlock>
+            <TextBox PlaceholderText="Enter username" TextAlignment="Center" FontSize="30"/>
+            <PasswordBox PlaceholderText="Enter password"  FontSize="30"/>
+        </StackPanel>
+    </Grid>
+</Page>
