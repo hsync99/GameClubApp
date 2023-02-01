@@ -1,5 +1,8 @@
-﻿using System;
+﻿using GameClubApp.Services;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -17,6 +20,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 namespace GameClubApp
 {
     /// <summary>
@@ -32,7 +36,19 @@ namespace GameClubApp
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            IServiceProvider DependencyService = ConfigureDependencyInjection();
+
         }
+        IServiceProvider ConfigureDependencyInjection()
+        {
+            var serviceCollection = new ServiceCollection();
+
+          
+            serviceCollection.AddTransient<IDataStore, DataStore>();   
+
+            return serviceCollection.BuildServiceProvider();
+        }
+     
 
         /// <summary>
         /// Вызывается при обычном запуске приложения пользователем. Будут использоваться другие точки входа,
