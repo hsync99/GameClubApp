@@ -9,12 +9,25 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="Black" >
-        <StackPanel  Margin="100,100,100,100">
-            <TextBlock Text="GAME CLUB APP" Foreground="Red" TextAlignment="Center" FontSize="60" FontWeight="ExtraBlack">
-                
-            </TextBlock>
-            <TextBox PlaceholderText="Enter username" TextAlignment="Center" FontSize="30"/>
-            <PasswordBox PlaceholderText="Enter password"  FontSize="30"/>
-        </StackPanel>
+       
+            <Frame Width="1200" Height="500" Background="DarkRed" Opacity="0.8"> 
+            <StackPanel  Margin="100,100,100,100">
+                <TextBlock Text="XXX" 
+                           Foreground="Red" 
+                           TextAlignment="Center" 
+                           FontSize="60" 
+                           FontWeight="ExtraBlack" 
+                           TextDecorations="Strikethrough"/>
+
+
+
+                <TextBox PlaceholderText="Enter username" 
+                         TextAlignment="Center" 
+                         FontSize="30"/>
+                <PasswordBox HorizontalContentAlignment="Center"/>
+
+            </StackPanel>
+        </Frame>
+          
     </Grid>
 </Page>
